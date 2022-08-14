@@ -7,6 +7,7 @@ let snakeBodyDisappear;
 
 let appleImage;
 let bodyImage;
+let dots;
 
 let apple = {
     x: 0,
@@ -35,6 +36,7 @@ const LEFT_KEY = 37;
 const RIGHT_KEY = 39;
 const UP_KEY = 38;
 const DOWN_KEY = 40;
+const DOT_SIZE = 10;
 
 function init() {
 
@@ -115,11 +117,17 @@ function gameOver() {
 }
 
 function locateApple() {
-    // You have to write code here to place the apple in different position in the canvas
+    
+    var r = Math.floor(Math.random() * MAX_RAND);
+    apple.x = r * DOT_SIZE;
+
+    r = Math.floor(Math.random() * MAX_RAND);
+    apple.y = r * DOT_SIZE;
 }    
 
 function checkApple() {
-    // You have to check here whether the apple is eaten by the snake or not
+    
+    
 }
 
 function checkCollision() {
